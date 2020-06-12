@@ -1,0 +1,13 @@
+CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
+find_package(OpenCV 3.4)
+# decide if we have openCV
+if (OpenCV_FOUND)
+	message("--- found OpenCV, compiling dso_opencv library.")
+	include_directories( ${OpenCV_INCLUDE_DIRS} )
+	set(HAS_OPENCV 1)
+else ()
+	message("--- could not find OpenCV-------")
+	set(HAS_OPENCV 0)
+endif ()
+add_executable(undistortion ${PROJECT_SOURCE_DIR}/undistortion.cpp )
+target_link_libraries(undistortion ${OpenCV_LIBS})

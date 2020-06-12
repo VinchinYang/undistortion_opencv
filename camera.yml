@@ -1,0 +1,12 @@
+%YAML:1.0
+Camera_Matrix:
+   rows: 3
+   cols: 3
+   dt: d
+   data: [ 2030.099976, 0., 894.5999756, 0., 2033.699951, 611.0999756, 0., 0., 1. ]
+Distortion_Coefficients: !!opencv-matrix
+   rows: 5
+   cols: 1
+   dt: d
+   data: [ -0.6107000113, 0.403299987,
+       -0.007300000172, 0.006699999794, 0. ]
